@@ -1,7 +1,8 @@
-/* ----- MOBILE ----- */
 :root {
     --hamWidth: 1.3rem;
 }
+
+/* ----- MOBILE ----- */
 
 .nav {
     display: flex;
