@@ -1,0 +1,25 @@
+/* ----- MOBILE ----- */
+:root {
+    --hamWidth: 1.3rem;
+}
+
+.nav {
+    display: flex;
+    padding: 1.5rem 1.1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburgerContainer {
+    width: var(--hamWidth);
+    aspect-ratio: 1 / 1;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburgerLine {
+    width: 100%;
+    height: calc(var(--hamWidth) / 6);
+    background-color: var(--gray);
+}
