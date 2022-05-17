@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './images/logo.svg'
 import './App.css';
-import Navbar from './components/Navbar/Navbar'
+import NavbarMobile from './components/Navbar/Mobile/Navbar'
 import Hero from './components/Hero/Hero';
 import Links from './components/Links/Links';
 import Statistics from './components/Statistics/Statistics';
@@ -11,7 +11,7 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <>
-      <Navbar />
+      <NavbarMobile />
       <Hero />
       <Links />
       <Statistics />
