@@ -1,7 +1,8 @@
 {
   "name": "url-shortening-api-master",
   "version": "1.0.0",
-  "description": "![Design preview for the Shortly URL shortening API coding challenge](./design/desktop-preview.jpg)",
+  "description": "Frontend Mentor challenge",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +17,9 @@
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.3"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.0",
+    "nodemon": "^2.0.16"
   }
 }
