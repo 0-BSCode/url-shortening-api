@@ -23,7 +23,7 @@ export const registerUser = asyncHandler(async (req, res) => {
     }
 
     const salt = await bcrypt.genSalt(10)
-    const hasedPass = await bcrypt.hash(password, salt)
+    const hashedPass = await bcrypt.hash(password, salt)
 
     const user = await User.create({
         name,
@@ -33,7 +33,7 @@ export const registerUser = asyncHandler(async (req, res) => {
 
     if (user) {
         res.status(201).json({
-            _id: user.id,
+            _id: user._id,
             name: user.name,
             email: user.email,
             token: generateToken(user._id)
