@@ -25,3 +25,15 @@
   --vdark-blue: hsl(255, 11%, 22%);
   --vdark-violet: hsl(260, 8%, 14%)
 }
+
+button {
+  background-color: var(--cyan);
+  border: none;
+  color: white;
+  font-family: 'Poppins';
+  font-size: 1rem;
+}
+
+p {
+  color: var(--gray-violet);
+}

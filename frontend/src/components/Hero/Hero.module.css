@@ -1,0 +1,32 @@
+.hero {
+    overflow: hidden;
+}
+
+.hero__img {
+    width: 27rem;
+    position: relative;
+    left: 1.5rem;
+}
+
+.hero__content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+.hero__subtitle {
+    margin-top: 0.7rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+}
+
+.hero__btn {
+    width: 9.5rem;
+    height: 2.7rem;
+    border-radius: 2rem;
+}
