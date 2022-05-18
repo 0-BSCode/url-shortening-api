@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Links.module.css'
+import LinkCom from './Link/Link'
 
 const Links = () => {
   return (
@@ -16,34 +17,8 @@ const Links = () => {
             Shorten it!
           </button>
         </form>
-        <div>
-          <p>
-            https://www.frontendmentor.io
-          </p>
-          <span>
-
-          </span>
-          <p>
-            https://rel.link/k4IKyk
-          </p>
-          <button>
-            Copy
-          </button>
-        </div>
-        <div>
-          <p>
-            https://www.frontendmentor.io
-          </p>
-          <span>
-
-          </span>
-          <p>
-            https://rel.link/k4IKyk
-          </p>
-          <button>
-            Copied!
-          </button>
-        </div>      
+        <LinkCom />
+        <LinkCom />     
       </div>
     </section>
   )
