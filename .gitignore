@@ -41,4 +41,7 @@ frontend/yarn-error.log*
 
 # Backend
 node_modules
+
+# Root
 .env
+client.rest
