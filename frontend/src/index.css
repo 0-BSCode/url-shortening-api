@@ -23,7 +23,12 @@
   --gray: hsl(0, 0%, 75%);
   --gray-violet: hsl(257, 7%, 63%);
   --vdark-blue: hsl(255, 11%, 22%);
-  --vdark-violet: hsl(260, 8%, 14%)
+  --vdark-violet: hsl(260, 8%, 14%);
+  --gray-bg: hsl(230, 25%, 95%);
+}
+
+section {
+  background-color: var(--gray-bg);
 }
 
 button {

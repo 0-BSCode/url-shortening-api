@@ -1,0 +1,54 @@
+.links {
+    position: relative;
+    width: 90%;
+    margin-inline: auto;
+    display: grid;
+    row-gap: 1rem;
+    bottom: 5rem;
+}
+
+.links__cell {
+    border-radius: 0.7rem;
+    padding: 1rem;
+}
+
+.links__form {
+    background-color: var(--dark-violet);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    background-image: url("../../images/bg-shorten-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 12rem;
+}
+
+.links__form * {
+    border-radius: 0.3rem;
+    height: 2.5rem;
+}
+
+.links__input {
+    display: block;
+    border: none;
+    padding-inline: 1rem;
+    padding-top: 0.1rem;
+    font-family: 'Poppins';
+    color: black;
+    outline: none;
+}
+
+.links__input::placeholder {
+    font-family: 'Poppins';
+    color: var(--gray-violet);
+    font-size: 0.9rem;
+}
+
+.links__error {
+    color: var(--red);
+    font-size: 0.6rem;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: 0.05rem;
+    display: none;
+}

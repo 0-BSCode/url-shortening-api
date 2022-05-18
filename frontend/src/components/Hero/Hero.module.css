@@ -1,5 +1,6 @@
 .hero {
     overflow: hidden;
+    background-color: white;
 }
 
 .hero__img {
@@ -10,6 +11,7 @@
 
 .hero__content {
     padding: 2rem;
+    padding-bottom: 10rem;
     text-align: center;
 }
 
