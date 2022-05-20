@@ -9,7 +9,6 @@
 
 .links__cell {
     border-radius: 0.4rem;
-    padding: 1rem;
 }
 
 .links__form {
@@ -21,6 +20,7 @@
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 12rem;
+    padding: 1.4rem;    
 }
 
 .links__form * {
@@ -57,6 +57,7 @@
 .link {
     background-color: white;
     position: relative;
+    padding: 1rem;
 }
 
 .link__original {
