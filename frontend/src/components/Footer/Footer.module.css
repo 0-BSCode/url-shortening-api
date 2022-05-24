@@ -24,7 +24,8 @@
 }
 
 .footer__link {
-    margin-top: 0.5rem;
+    letter-spacing: 0.01rem;
+    margin-top: 0.6rem;
     font-size: 0.75rem;
     color: var(--gray-violet);
 }

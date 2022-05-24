@@ -39,6 +39,10 @@ button {
   font-size: 1rem;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 p {
   color: var(--gray-violet);
 }
