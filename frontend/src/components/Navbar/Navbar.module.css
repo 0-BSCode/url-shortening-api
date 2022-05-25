@@ -17,6 +17,11 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 2;
+}
+
+.hamburgerContainer:hover {
+    cursor: pointer;
 }
 
 .hamburgerLine {

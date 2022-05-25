@@ -3,7 +3,7 @@ import styles from './Menu.module.css'
 
 const Menu = () => {
   return (
-    <dialog open className={styles.menu}>
+    <dialog className={styles.menu}>
         <ul className={styles.menu__links}>
             <li className={styles.menu__linkItem}>
                 <a  className={styles.menu__link}>
