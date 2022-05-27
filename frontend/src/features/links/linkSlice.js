@@ -2,7 +2,7 @@ import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
 import linkService from './linkService'
 
 const initialState = {
-    links: [],
+    links: {},
     isError: false,
     isSuccess: false,
     isLoading: false,
@@ -21,6 +21,9 @@ export const addLink = createAsyncThunk('links/addLink', async (link, thunkAPI) 
 export const linkSlice = createSlice({
     name: 'link',
     initialState,
+    reducers: {
+        initialize: state => linkService.getLinks(initialState)
+    },
     extraReducers: builder => {
         builder
             .addCase(addLink.pending, state => {
@@ -29,7 +32,7 @@ export const linkSlice = createSlice({
             .addCase(addLink.fulfilled, (state, action) => {
                 state.isLoading = false
                 state.isSuccess = true
-                state.links.push(action.payload)
+                state.links[action.payload.result.original_link] = action.payload.result.full_short_link
             })
             .addCase(addLink.rejected, (state, action) => {
                 state.isLoading = false
@@ -39,4 +42,5 @@ export const linkSlice = createSlice({
     }
 })
 
+export const {initialize} = linkSlice.actions
 export default linkSlice.reducer

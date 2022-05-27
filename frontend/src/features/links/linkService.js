@@ -1,17 +1,16 @@
 import axios from 'axios'
 
+const getLinks = (initState) => {
+    return {...initState, links: JSON.parse(localStorage.getItem('links'))}
+}
+
 const shorten = async (link) => {
     const response = await axios.get(`https://api.shrtco.de/v2/shorten?url=${link}`)
-    let links = localStorage.getItem('links')
-
-    // if (!links) {
-    //     localStorage.setItem('links', [])
-    //     links = localStorage.getItem('links')
-    // }
+    let links = JSON.parse(localStorage.getItem('links')) || {}
 
     if (response.data) {
-        // localStorage.setItem('links', [JSON.stringify(response.data), ...links])
-        console.log(response.data)
+        links[link] = response.data.result.full_short_link
+        localStorage.setItem('links', JSON.stringify(links))
     }
 
     return response.data
@@ -22,6 +21,7 @@ const remove = () => {
 }
 
 const linkService = {
+    getLinks,
     shorten
 }
 
