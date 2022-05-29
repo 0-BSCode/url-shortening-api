@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 const getLinks = (initState) => {
-    return {...initState, links: JSON.parse(localStorage.getItem('links'))}
+    const links = JSON.parse(localStorage.getItem('links')) == null? {}: JSON.parse(localStorage.getItem('links'))
+    return {...initState, links}
 }
 
 const shorten = async (link) => {
@@ -9,7 +10,10 @@ const shorten = async (link) => {
     let links = JSON.parse(localStorage.getItem('links')) || {}
 
     if (response.data) {
-        links[link] = response.data.result.full_short_link
+        const newLink = {}
+        newLink[link] = response.data.result.full_short_link
+        links = Object.assign(newLink, links)
+        console.log(links)
         localStorage.setItem('links', JSON.stringify(links))
     }
 

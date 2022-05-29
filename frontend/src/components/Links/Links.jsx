@@ -2,17 +2,35 @@ import React from 'react'
 import styles from './Links.module.css'
 import LinkCom from './Link/Link'
 import { addLink } from '../../features/links/linkSlice'
-import {useDispatch} from 'react-redux'
-import { useState } from 'react'
+import {useSelector, useDispatch} from 'react-redux'
+import { useState, useEffect } from 'react'
 
 const Links = () => {
   const [text, setText] = useState('')
   const dispatch = useDispatch()
+  const links = useSelector(store => store.links)
 
   const handleSubmit = e => {
     e.preventDefault()
+
     dispatch(addLink(text))
+    setText('')
   }
+
+  useEffect(() => {
+    const errText = document.querySelector(`.${styles.links__error}`)
+    const formInput = document.querySelector(`.${styles.links__input}`)
+    const customRed = getComputedStyle(document.documentElement).getPropertyValue('--red')
+
+    if (links['isError']) {
+      errText.style.display = 'block';
+      formInput.style.border = `0.15rem solid ${customRed}`;
+    } else {
+      errText.style.display = 'none';
+      formInput.style.border = `none`; 
+      formInput.value = text
+    }
+  })
 
   return (
     <section>
@@ -35,8 +53,16 @@ const Links = () => {
             Shorten it!
           </button>
         </form>
-        <LinkCom />
-        <LinkCom />     
+        {
+          links['links'] &&
+          Object.keys(links['links']).map(link => (
+            <LinkCom 
+              key={link} 
+              original={link} 
+              shortened={links['links'][link]}
+            />
+          ))
+        }
       </div>
     </section>
   )

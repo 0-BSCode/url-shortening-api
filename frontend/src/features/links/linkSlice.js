@@ -31,6 +31,7 @@ export const linkSlice = createSlice({
             })
             .addCase(addLink.fulfilled, (state, action) => {
                 state.isLoading = false
+                state.isError = false
                 state.isSuccess = true
                 state.links[action.payload.result.original_link] = action.payload.result.full_short_link
             })
