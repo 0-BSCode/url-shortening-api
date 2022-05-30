@@ -33,7 +33,7 @@ export const linkSlice = createSlice({
                 state.isLoading = false
                 state.isError = false
                 state.isSuccess = true
-                state.links[action.payload.result.original_link] = action.payload.result.full_short_link
+                state.links = JSON.parse(localStorage.getItem('links'))
             })
             .addCase(addLink.rejected, (state, action) => {
                 state.isLoading = false

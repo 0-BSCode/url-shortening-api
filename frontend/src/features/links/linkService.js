@@ -13,7 +13,6 @@ const shorten = async (link) => {
         const newLink = {}
         newLink[link] = response.data.result.full_short_link
         links = Object.assign(newLink, links)
-        console.log(links)
         localStorage.setItem('links', JSON.stringify(links))
     }
 
