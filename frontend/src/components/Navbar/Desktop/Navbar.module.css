@@ -29,12 +29,8 @@
     font-size: 0.9rem;
 }
 
-.nav__linkItem:hover {
+.nav__link:hover {
     color: black;
-}
-
-.nav__link {
-
 }
 
 .nav__btn {
