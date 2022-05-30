@@ -18,7 +18,10 @@ const Navbar = () => {
 
   return (
     <nav className={styles.nav}>
-      <img src={logo} alt="Shortly" />
+      <img 
+        className={styles.nav__logo} 
+        src={logo} 
+        alt="Shortly" />
       <div 
         className={styles.hamburgerContainer}
         onClick={toggleMenu}
