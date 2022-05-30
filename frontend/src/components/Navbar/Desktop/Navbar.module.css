@@ -1,0 +1,45 @@
+.nav {
+    display: flex;
+    padding: 2rem 5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    width: 7rem;
+}
+
+.nav__linksContainer {
+    display: flex;
+}
+
+.nav__links,
+.nav__linkItem {
+    margin-left: 1rem;
+}
+
+.nav__links {
+    list-style-type: none;
+}
+
+.nav__linkItem {
+    display: inline-block;
+    color: var(--gray-violet);
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.nav__linkItem:hover {
+    color: black;
+}
+
+.nav__link {
+
+}
+
+.nav__btn {
+    margin-left: 1.5rem;
+    border-radius: 5rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+}

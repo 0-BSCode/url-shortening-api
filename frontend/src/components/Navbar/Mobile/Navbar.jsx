@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../../../images/logo.svg'
-import styles from '../Navbar.module.css'
+import styles from './Navbar.module.css'
 
 const Navbar = () => {
   let modalClosed = true

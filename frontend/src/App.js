@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import NavbarMobile from './components/Navbar/Mobile/Navbar'
+import NavbarDesktop from './components/Navbar/Desktop/Navbar'
 import Hero from './components/Hero/Hero';
 import Links from './components/Links/Links';
 import Statistics from './components/Statistics/Statistics';
@@ -13,6 +14,7 @@ import { initialize } from './features/links/linkSlice'
 
 function App() {
   const dispatch = useDispatch()
+  let width = window.innerWidth
 
   useEffect(() => {
     dispatch(initialize())
@@ -20,7 +22,10 @@ function App() {
 
   return (
     <>
-      <NavbarMobile />
+      {width >= 1024?
+        <NavbarDesktop />:
+        <NavbarMobile />
+      }
       <Menu />
       <Hero />
       <Links />
