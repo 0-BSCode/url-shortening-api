@@ -31,3 +31,10 @@
     border-radius: 2rem;
     font-size: 1.1rem;
 }
+
+@media screen and (min-width: 1024px) {
+    .boost {
+        background-image: url('../../images/bg-boost-desktop.svg');
+        height: 12rem;
+    }
+}
