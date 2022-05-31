@@ -101,6 +101,7 @@
     .links {
         max-width: 100%;
         margin-inline: 5rem;
+        bottom: 4rem;
     }
 
     .links__form {
