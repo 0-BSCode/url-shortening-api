@@ -37,4 +37,13 @@
         background-image: url('../../images/bg-boost-desktop.svg');
         height: 12rem;
     }
+
+    .boost__title {
+        font-size: 1.8rem;
+    }
+
+    .boost__btn {
+        width: 10rem;
+        height: 3rem;
+    }
 }
