@@ -31,7 +31,7 @@ const Statistics = () => {
           title="Fully Customizable"
           subtitle="Improve brand awareness and content discoverability through customizable 
           links, supercharging audience engagement." />
-          <span className={styles.stats__vertical} />
+          <span className={styles.stats__line} />
       </div>
     </section>
   )

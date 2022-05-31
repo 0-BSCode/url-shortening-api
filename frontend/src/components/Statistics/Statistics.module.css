@@ -23,7 +23,7 @@
     position: relative;
 }
 
-.stats__vertical {
+.stats__line {
     width: 0.5rem;
     height: 50rem;
     display: block;
@@ -72,4 +72,70 @@
     font-size: 0.85rem;
     letter-spacing: 0.01rem;
     line-height: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .stats {
+        padding-bottom: 8rem;
+    }
+
+    .stats__title {
+        font-size: 2rem;
+    }
+
+    .stats__subtitle {
+        width: 50%;
+        margin-inline: auto;
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+    }
+
+    .stats__line {
+        width: 45rem;
+        height: 0.4rem;
+        top: 6rem;
+    }
+    
+    .stats__statContainer {
+        width: 100%;
+        padding-inline: 5rem;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 0;
+        column-gap: 1.5rem;
+    }
+
+    /* Individual statistics */
+    .stat {
+        padding: 1.3rem;
+        padding-top: 3.3rem;
+        text-align: left;
+        position: relative;
+    }
+
+    .stat__imgBackground {
+        left: 25%;
+        width: 4rem;
+    }
+
+    .stat__img {
+        width: 1.7rem;
+    }
+
+    .stat__title {
+        font-size: 0.95rem;
+    }
+
+    .stat__subtitle {
+        margin-top: 0.8rem;
+        font-size: 0.6rem;
+        line-height: 1rem;
+    }
+
+    .stat:nth-child(2) {
+        top: 1.5rem;
+    }
+
+    .stat:nth-child(3) {
+        top: 3rem;
+    }
 }
