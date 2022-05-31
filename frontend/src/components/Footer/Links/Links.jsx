@@ -11,7 +11,9 @@ const Links = ({title, items}) => {
         {items.map(item => (
             <li 
                 className={styles.footer__link}
-                key={item}>{item}</li>
+                key={item}>
+                  <a>{item}</a>
+            </li>
         ))}
     </ul>
   )
