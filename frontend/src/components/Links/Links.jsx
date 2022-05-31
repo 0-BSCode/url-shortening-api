@@ -21,14 +21,18 @@ const Links = () => {
     const errText = document.querySelector(`.${styles.links__error}`)
     const formInput = document.querySelector(`.${styles.links__input}`)
     const customRed = getComputedStyle(document.documentElement).getPropertyValue('--red')
+    const customGray = getComputedStyle(document.documentElement).getPropertyValue('--gray-violet')
 
     if (links['isError']) {
       errText.style.display = 'block';
       formInput.style.border = `0.15rem solid ${customRed}`;
+      formInput.style.setProperty("--placeholder-color", customRed);
     } else {
       errText.style.display = 'none';
       formInput.style.border = `none`; 
       formInput.value = text
+      formInput.style.setProperty("--placeholder-color", customGray);
+
     }
   })
 
