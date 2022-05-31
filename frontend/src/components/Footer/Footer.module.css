@@ -29,10 +29,13 @@
     margin-top: 0.6rem;
     font-size: 0.75rem;
     color: var(--gray-violet);
+}
+
+.footer__link > a {
     transition: all 0.2s;
 }
 
-.footer__link:hover {
+.footer__link > a:hover {
     color: var(--cyan);
 }
 

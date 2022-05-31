@@ -12,7 +12,9 @@ const Links = ({title, items}) => {
             <li 
                 className={styles.footer__link}
                 key={item}>
-                  <a>{item}</a>
+                  <a>
+                    {item}
+                  </a>
             </li>
         ))}
     </ul>

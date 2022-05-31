@@ -11,7 +11,6 @@ const Link = ({original, shortened}) => {
     const btns = document.querySelectorAll(`.${styles.link__copy}`)
     
     btns.forEach(btn => {
-      console.log(btn == e.target)
       if (btn == e.target) {
         btn.classList.add(`${styles.link__copyCopied}`)
         btn.textContent = 'Copied!'
