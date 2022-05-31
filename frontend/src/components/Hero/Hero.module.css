@@ -32,3 +32,45 @@
     height: 2.7rem;
     border-radius: 2rem;
 }
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .hero__content,
+    .hero__img {
+        padding-top: 1.5rem;
+        padding-bottom: 10rem;
+        grid-row: 1;
+    }
+
+    .hero__content {
+        padding-left: 5rem;
+        padding-right: 0;
+        text-align: left;
+        grid-column: 1;
+        width: 105%;
+    }
+
+    .hero__title {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    .hero__subtitle {
+        font-size: 0.85rem;
+        line-height: 1.7rem;
+        margin-top: 0;
+    }
+
+    .hero__img {
+        position: relative;
+        left: 6rem;
+        width: 31rem;
+        object-fit: contain;
+        grid-column: 2;
+    }
+}

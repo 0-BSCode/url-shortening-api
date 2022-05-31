@@ -6,7 +6,7 @@
 }
 
 .nav__logo {
-    width: 7rem;
+    width: 6rem;
 }
 
 .nav__linksContainer {
@@ -15,18 +15,22 @@
 
 .nav__links,
 .nav__linkItem {
-    margin-left: 1rem;
+    margin-left: 0.8rem;
 }
 
 .nav__links {
     list-style-type: none;
 }
 
+.nav__linkItem,
+.nav__btn {
+    font-size: 0.85rem;
+}
+
 .nav__linkItem {
     display: inline-block;
     color: var(--gray-violet);
     transition: all 0.2s;
-    font-size: 0.9rem;
 }
 
 .nav__link:hover {
@@ -37,5 +41,4 @@
     margin-left: 1.5rem;
     border-radius: 5rem;
     padding: 0.6rem 1.5rem;
-    font-size: 0.9rem;
 }
