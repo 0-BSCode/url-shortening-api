@@ -51,6 +51,10 @@ const Footer = () => {
           alt="Instagram"
         />                         
       </div>
+      <div className={styles.footer__attribution}>
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/0-BSCode">BSCode</a>.
+      </div>
     </section>
   )
 }
